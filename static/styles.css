@@ -1,0 +1,19 @@
+body { /* no dot or # means a tag */
+    font-family: Arial, sans-serif; /* prioritizes Arial, but if that fails resort to sans-serif */
+    background-color: #c2e4ff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(250, 242, 232);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#message {
+    white-space: pre-line;
+}
