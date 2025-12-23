@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href ="static/styles.css">
+        <link rel="stylesheet" href ="static/styles.css"> <!-- links to CSS file, rel ="stylesheet" to set relationship  -->
         <title> Kelwyn Mebane II </title>
     </head>
     <body>
-        <div class = "container">
+        <div class = "container"> <!-- CSS's reference, container for styling the body -->
         <h1> Kelwyn's Website </h1>
-        <hr>
-        <p id = "message"> 
+        <hr> 
+        <p id = "message">  <!-- id for js file .textchanges in functions-->
             Thanks for visiting my website. Please choose an option below </p>
         <ul>
             <li> 
-                <button onclick = "info()">About Me </button>
+                <button id= "infoBtn">About Me </button> <!-- id's info button for js eventlistener-->
             </li>
             <li> 
-                <button onclick = "projects()"> About Projects </button>
+                <button id="projectsBtn"> About Projects </button> <!--" ^^ "-->
             </li>
         </ul>
+        <h2 id = "contact"> Contact Me </h2> <!-- for website visitors to leave contact info-->
+        <input type = "text" id="nameInput" placeholder = "Kelwyn Mebane II"> <!-- creates fields for user input w/ example placeholder-->
+        <input type = "text" id="emailInput" placeholder = "Tkmebane3@gmail.com"><!-- ^^ -->
+        <button id="contactBtn">Submit</button> <!-- adds submit button and ids for event listener-->
+        <p id = "contactMessage" class="fade"></p> <!--id's class as fade for CSS animation reference -->
         </div>
-        <script src="static/script.js"> </script>
+        <script src="static/script.js"> </script> <!-- links to the js -->
     </body>
 </html>

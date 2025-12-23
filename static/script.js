@@ -1,4 +1,4 @@
-function info() {
+function info() { // function to display info and references the "message" id to change text
     document.getElementById("message").textContent =
     `My name is Kelwyn Mebane II, I am currently a graduate student at Merrimack College
     pursuing a Master's in Computer Science. I began backend coding in early 2025 
@@ -7,9 +7,9 @@ function info() {
     into backend projects through my Masters program. By late 2025, I began expanding my 
     knowledge from just writing backend code to officially building. Click "About Projects" 
     to learn more about my projects and where I aim to take them!`;
-    }
+}
 
-function projects() {
+function projects() { // ^^
     document.getElementById("message").textContent =
     `
     Netly:
@@ -37,4 +37,38 @@ function projects() {
     data analyzing techniques. The frontend will likely be built with a similar stack to Netly and deployed to
     an AWS EC2 instance upon completion. 
     `;
+}
+
+// variables for buttons and event listeners for functionality
+const infoBtn = document.getElementById("infoBtn");
+const projectsBtn = document.getElementById("projectsBtn");
+const contactBtn = document.getElementById("contactBtn");
+
+// event listeners for the above buttons
+infoBtn.addEventListener("click", info);
+projectsBtn.addEventListener("click", projects);
+contactBtn.addEventListener("click", submitContact);
+
+// function that handles the contact inputs 
+function submitContact() {
+    //variables for the input fields
+    const name = document.getElementById("nameInput").value; // .value only for input fields  
+    const email = document.getElementById("emailInput").value;
+    const message = document.getElementById("contactMessage");
+
+    // starts off not showing the message
+    message.classList.remove("show");
+
+    // if/else statements to determine which message shows
+    if (name === "" || email === "" ) {
+        message.textContent = "Please be sure to fill out all fields so I can get back to you";
+        message.style.color = "red";
+        return;
+    } else {
+        message.textContent = `Thanks ${name}, I will get back to you soon!`;
+        message.style.color = "green";
     }
+    // initiates the message animation by adding the "show" class to HTML element that css has an id for
+    message.classList.add("show");
+}
+

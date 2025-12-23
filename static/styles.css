@@ -5,7 +5,7 @@ body { /* no dot or # means a tag */
     padding: 0;
 }
 
-.container {
+.container { /* dot refers to the class I created in index.html*/
     width: 80%;
     margin: auto;
     padding: 20px;
@@ -14,6 +14,15 @@ body { /* no dot or # means a tag */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#message {
+#message { /* spaces apart the paragraphs */
     white-space: pre-line;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out; /* slowly fades in the id'd element (contactMessage) */
+}
+
+.fade.show { /* appearance when the message is revealed */
+    opacity: 1;
 }
